@@ -77,8 +77,9 @@ section {
   display: flex;
   align-items: center;
 }
+
 .banner-left img {
-  width: 100%;
+  width: 96%;
   height: auto;
 }
 section .banner-left {
@@ -86,7 +87,7 @@ section .banner-left {
   height: auto;
   padding-top: .5rem;
   padding-bottom: .5rem;
-  margin: 1.5rem;
+  margin: 1.5rem 2rem 1.5rem 1.5rem;
 
 }
 .cta {
@@ -95,11 +96,12 @@ section .banner-left {
   font-family: inherit;
   font-size: 1.5rem;
   justify-content: space-between;
+
 }
 .btn {
   margin: 1.5rem auto 1.5rem auto;
   background-color:#4A4A4A;
-  width: 100%;
+  max-width: 100%;
   padding-right: 1rem;
   text-align: center;
   padding-top: 0.5rem;
@@ -165,6 +167,7 @@ section .banner-left {
   align-items: center;
   padding: 1rem;
   border-bottom: 1.5px solid lightgray;
+  max-width: 100%;
 }
 
 
@@ -183,11 +186,11 @@ section .banner-left {
 }
 
 .section-type-2 .article-title {
- width: 65%;
+ max-width: 65%;
  align-content: center;
 }
 .article-title {
-  width: 65%;
+  max-width: 65%;
   display: flex;
   flex-direction: column;
 
@@ -206,7 +209,7 @@ section .banner-left {
 .section3 {
  display: flex;
  flex-direction: column;
- width: 100%;
+ max-width: 100%;
  background-color: #D8D8D8;
 
 }
@@ -286,6 +289,10 @@ padding-top: 8px
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.section-type-2 video {
+  margin: 0;
 }
 
 .section4 .videos {
@@ -383,29 +390,44 @@ display: none;
 
   }
 
-.banner {
+section.banner {
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 align-items: flex-start;
+background-color: #D8D8D8;
 }
 
 section .banner-left {
   width: 100%;
-  margin: 0;
-  padding: 0;
-
+  margin: 0px;
+  padding: 0px;
+}
+.banner-left img {
+  width: 100%;
 }
 
 .cta {
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 0 2rem 1rem;
   font-size: 1rem;
+  max-width: 100%;
+}
+.cta-text {
   width: 100%;
-
+}
+.cta-text h1 {
+  font-weight: bold;
+  font-size: 2.7rem;
+  line-height: 1.2;
+}
+.cta-text h3 {
+ padding: 2rem 0 1rem 0;
+ line-height: 1.5;
+ font-size:1rem;
 }
 .btn {
   background-color:#4A4A4A;
-  width: 100%;
+  max-width: 100%;
   padding-right: 16px;
   height: 1.5rem;
   display: flex;
@@ -420,26 +442,18 @@ section .banner-left {
   text-align: center;
   color: #ffffff;
 }
-.cta-text {
-  width: 90%;
-}
-.cta-text h1 {
-  font-weight: bold;
-  font-size: 2.7rem;
-  line-height: 1.2;
-}
-.cta-text h3 {
- padding: 2rem 0 1rem 0;
- line-height: 1.5;
- font-size:1rem;
-}
+
 
 /* blog aricles  */
 
 #left-content {
   display: none;
 }
-
+.section-type-2 .articles {
+max-width: 100%;
+padding-bottom: 0;
+padding-top: 0;
+}
 .articles img {
     display: none;
 }
@@ -448,22 +462,25 @@ section .banner-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  max-width: 100%;
   margin: 0;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
 }
 
 .article img {
-   width: 100%;
    height: auto;
-   padding: 1rem;
+   padding-right: 0;
+
 }
 
-.article .responsive-img {
+.articles .responsive-img {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0;
 }
+
 
 .section-type-2 .articles {
     width: 100%;
@@ -475,19 +492,26 @@ section .banner-left {
 
 .article-title {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
     margin-left: 16px;
-    width: auto;
-    margin-bottom: 64px;
+    width: 100%;
+    margin-bottom: 1rem;
+
 }
 .article-title h3 {
+  padding-top: 1.5rem;
   padding-bottom: 0;
-  font-size: 1.5rem
+  margin: 0;
+  font-size: 1.5rem;
 }
 
-.sub-heading {
-    line-height: 2;
+span.sub-heading {
+  padding-top: .5rem;
+  margin-bottom: .5rem;
+  line-height: 2;
+  font-size: .8rem;
+  max-width: 100%;
 }
  /* course offerings */
 
@@ -497,14 +521,17 @@ section .banner-left {
     margin-bottom: 32px;
 }
 .title h1 {
-  padding-top: 0;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2.3rem;
 }
 .courses-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 32px 0;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 2rem;
 }
 
 .course-image img {
@@ -533,8 +560,9 @@ section .banner-left {
     display: none;
 }
 /* video section */
-.title h1 {
-  padding-top: 2rem;
+.section4 .title h1 {
+  padding-top: 0;
+  padding-bottom: 1rem;
   font-size: 2.3rem;
 }
 .video-list {
@@ -546,14 +574,21 @@ display: none;
 .featured {
   display: none;
 }
+
 .responsive-video {
-display: block;
-margin-top: 1rem;
+display: flex;
+margin-top: 0rem;
 margin-bottom: 1.5rem;
+}
+.section4 {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
 }
 footer{
   border-top: 0px solid lightgray;
   margin: 16px;
+  font-size: .8rem;
+  height: auto;
 }
 .footer-menu {
   display: none;
