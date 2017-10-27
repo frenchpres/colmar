@@ -65,7 +65,9 @@ nav ul li a {
   color: black;
   margin: 0 1rem 0 0;
 }
-
+nav ul li a:hover {
+  color: gray;
+}
 .nav-mobile {
   display: none;
 }
@@ -161,6 +163,7 @@ section .banner-left {
 }
 .article:hover {
   background-color: lightgray;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3)
 }
 .article {
   display: flex;
@@ -233,7 +236,7 @@ section .banner-left {
 
 }
 .course:hover{
-  background-color: #E7E7E7;
+  box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.3)
 }
 .course{
   display: flex;
@@ -321,6 +324,7 @@ padding-top: 8px
 
 .video-list:hover {
   background-color: lightgray;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3)
 }
 .video-list {
   display: flex;
